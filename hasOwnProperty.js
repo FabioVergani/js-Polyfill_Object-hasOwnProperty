@@ -1,8 +1,5 @@
 //#Polyfill
-Object.prototype.hasOwnProperty||(Object.prototype.hasOwnProperty=function(x){
- var o,e=this,p=String(x);
- return p in e && (o=e.__proto__||e.constructor.prototype,!(p in o)||e[p]!== o[p])
-});
+Object.prototype.hasOwnProperty||(Object.prototype.hasOwnProperty=function(x){var o,e=this,p=String(x);return p in e && (o=e.__proto__||e.constructor.prototype,(p in o ===false)||e[p]!== o[p])});
 
 /*
 var obj1={a:1,b:false}, obj2=Object.create(obj1);
